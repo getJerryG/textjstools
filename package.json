@@ -1,0 +1,31 @@
+{
+  "name": "textjstools",
+  "version": "1.0.11",
+  "description": "this is about javascript object function package",
+  "main": "dist/index.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config config/webpack.config.js"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getJerryG/textjstools"
+    },
+  "author": "CjerryG",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2"
+  }
+}
