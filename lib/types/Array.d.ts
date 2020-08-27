@@ -1,4 +1,8 @@
 /**
+ * 数据去重 Remove the repetition
+ */
+export declare const unique: (arr: any[]) => any[];
+/**
  * 返回数组最小值
  * @param arr
  */

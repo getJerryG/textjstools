@@ -11,8 +11,6 @@ const textjstools = {
   ...oObject
 }
 
-
-
 export default textjstools
 
 

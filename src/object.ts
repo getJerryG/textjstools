@@ -1,15 +1,22 @@
-import { isObject, isArrayObject } from './data-type'
+import { isObject, isArrayObject, isTypeOfObject } from './data-type'
 export const extend = (to: Object, _from: any[] | object): object => {
   for (var key in _from) {
     to[key] = _from[key];
   }
   return to
 }
+
 export const toObject = (arr: any[]) => {
+  console.log(arr);
+
   var res = {};
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i]) {
       extend(res, arr[i]);
+
+    } else {
+      console.log(123);
+
     }
   }
   return res
@@ -55,7 +62,34 @@ export const looseEqual = (a: any, b: any) => {
     return false
   }
 }
+/**
+ * 深度合并
+ * @param a 
+ * @param b 
+ */
+export const merge = (a: any, b: any): object => {
+  if(isObject(a)){
+    let obj = {},
+      aKeys = Object.keys(a),
+      bkeys = isObject(b)? Object.keys(b):null,
+      keys = aKeys.concat(bkeys);
+    keys.map(value =>{
+      if(isTypeOfObject(a[value],b[value]) && isArrayObject(a[value]) && isArrayObject(b[value])){
+        obj[value] = merge(a[value],b[value])
+      }else {
+        obj[value] =b[value]
+      }
+    })
+    return obj
+  }else {
+    return b
+  }
+}
+
+
+
 export default {
   extend,
-  toObject
+  toObject,
+  merge
 }

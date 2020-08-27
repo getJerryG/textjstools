@@ -13,7 +13,22 @@ export const isStringObject = (value:object): Boolean => !isNull(value)?value in
 export const isBooleanObject = (value:object): Boolean => !isNull(value)?value instanceof Boolean :false
 export const isSymbol = (value: any): Boolean => typeof (value) === 'symbol';
 export const isBigint = (value: any): Boolean => typeof (value) === 'bigint';
-
+/**
+ * 判断两个值类型是否相等
+ * @param a 
+ * @param b 
+ */
+export const isType = (a:any,b:any):Boolean =>{
+  return isNumber(a)&&isNumber(b)||
+  isString(a)&&isString(b)||
+  isBoolean(a)&&isBoolean(b)||
+  isObject(a)&&isObject(b)||
+  isUndefined(a)&&isUndefined(b)||
+  isNull(a)||isNull(b)
+}
+export const isTypeOfObject = (a:any,b:any):Boolean =>{
+  return isObject(a)&&isObject(b)
+}
 export default {
   isUndefined, 
   isNumber, 
@@ -28,7 +43,9 @@ export default {
   isStringObject, 
   isBooleanObject,
   isSymbol, 
-  isBigint
+  isBigint,
+  isType,
+  isTypeOfObject
 }
 
 

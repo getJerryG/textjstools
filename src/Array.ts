@@ -1,16 +1,14 @@
 /**
  * 数据去重 Remove the repetition
  */
-const unique = (arr: any[]): any[] => {
-  let result = [], hash = {};
-  for (let i = 0, elem: any; (elem = arr[i]) != null; i++) {
-    var code = elem.commodity.commodityCode;
-    if (!hash[code]) {
-      result.push(elem);
-      hash[code] = true;
-    }
-  }
-  return result;
+export const unique = (arr: any[]): any[] => {
+ let newArr = [];
+ for(let i = 0; i <arr.length; i++){
+   if(newArr.indexOf(arr[i]) === -1){
+     newArr.push(arr[i])
+   }
+ }
+ return newArr
 }
 /**
  * 返回数组最大值
@@ -37,6 +35,22 @@ export const toArray = (list:any[],start=0):any[]=>{
   }
   return ret
 }
+// export const
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default { 
   unique ,
   arrayMax ,

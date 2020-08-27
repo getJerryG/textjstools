@@ -12,6 +12,13 @@ export declare const isStringObject: (value: object) => Boolean;
 export declare const isBooleanObject: (value: object) => Boolean;
 export declare const isSymbol: (value: any) => Boolean;
 export declare const isBigint: (value: any) => Boolean;
+/**
+ * 判断两个值类型是否相等
+ * @param a
+ * @param b
+ */
+export declare const isType: (a: any, b: any) => Boolean;
+export declare const isTypeOfObject: (a: any, b: any) => Boolean;
 declare const _default: {
     isUndefined: (value: any) => Boolean;
     isNumber: (value: any) => Boolean;
@@ -27,5 +34,7 @@ declare const _default: {
     isBooleanObject: (value: object) => Boolean;
     isSymbol: (value: any) => Boolean;
     isBigint: (value: any) => Boolean;
+    isType: (a: any, b: any) => Boolean;
+    isTypeOfObject: (a: any, b: any) => Boolean;
 };
 export default _default;

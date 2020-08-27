@@ -46,7 +46,7 @@ import {toStr} form 'textjstools'
 - [x] 阶乘 （factorials）
 - [x] 数组去重（Array to remove duplicate）
 - [ ] 深度克隆 （Deep cloning）
-- [ ] 对象深度合并（Object depth merge）
+- [x] 对象深度合并（Object depth merge）
 - [ ] 算法 （Javascript algorithm）
 
 

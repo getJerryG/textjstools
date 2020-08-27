@@ -1,6 +1,7 @@
 declare const textjstools: {
     extend: (to: Object, _from: object | any[]) => object;
     toObject: (arr: any[]) => {};
+    merge: (a: any, b: any) => object;
     unique: (arr: any[]) => any[];
     arrayMax: (arr: number[]) => number;
     arrayMin: (arr: number[]) => number;
@@ -41,5 +42,7 @@ declare const textjstools: {
     isBooleanObject: (value: object) => Boolean;
     isSymbol: (value: any) => Boolean;
     isBigint: (value: any) => Boolean;
+    isType: (a: any, b: any) => Boolean;
+    isTypeOfObject: (a: any, b: any) => Boolean;
 };
 export default textjstools;
